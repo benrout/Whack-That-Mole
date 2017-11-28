@@ -1,0 +1,84 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  text-shadow: 2px 2px grey;
+  margin-bottom: 0;
+}
+
+h2 {
+  text-align: center;
+  margin: 10px auto;
+  font-size: 2rem;
+}
+
+button {
+  background-color: #4CAF50;
+  font-size: 1.5rem;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #888888;
+}
+
+.score {
+  background:rgba(255,255,255,0.2);
+  padding:0 3rem;
+}
+
+.start {
+  margin-top: 20px;
+  text-align: center;
+  left: 50%;
+  margin-bottom: 0;
+}
+
+.game {
+  width: 50%;
+  height:350px;
+  display:flex;
+  flex-wrap:wrap;
+  margin:0 auto;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  background-size: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(dirt.png) bottom center no-repeat;
+  background-size: contain;
+  content:'';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 1;
+  bottom:-15px;
+}
+
+.mole {
+  background:url('mole.svg') bottom center no-repeat;
+  background-size: 100px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
